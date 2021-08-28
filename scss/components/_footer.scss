@@ -1,0 +1,5 @@
+@use "../themes/index" as *;
+#footer {
+    min-height: 25vh;
+    background-color: $dark-card-color;
+}

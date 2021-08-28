@@ -1,0 +1,13 @@
+@use "./components/navbar";
+@use "./components/title";
+@use "./components/cards";
+@use "./components/footer";
+@use "./components/posts";
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: hidden;
+}

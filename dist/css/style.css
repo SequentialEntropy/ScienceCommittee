@@ -1,0 +1,255 @@
+#navbar {
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 10rem;
+  background-color: #effaff;
+  width: 100vw;
+  transition-duration: 1s;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#logo * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#logo a {
+  font-family: "Robotto", sans-serif;
+  font-weight: 500;
+  color: #6e90a0;
+  font-size: 2rem;
+}
+#logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+#links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbutton {
+  font-family: "Robotto", sans-serif;
+  font-size: 1.5rem;
+  background-color: none;
+  color: #94d8ff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-weight: 300;
+  transition-duration: 0.5s;
+}
+.navbutton.active {
+  background-color: #94d8ff;
+  color: #effaff;
+}
+.navbutton:hover:not(.active) {
+  color: #3f89a9;
+}
+
+#title {
+  min-height: calc(100vh - 10rem);
+  margin-top: 10rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/beakers.min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#title * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#title h1 {
+  font-family: "Robotto", sans-serif;
+  font-weight: 300;
+  color: #effaff;
+  font-size: 5rem;
+}
+#title img {
+  width: auto;
+  height: auto;
+  max-height: 50vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.card * {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.card h2 {
+  font-family: "Robotto", sans-serif;
+  color: #3f89a9;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.column * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.column .icon {
+  max-width: 12rem;
+  width: auto;
+  height: auto;
+}
+.column .snippet {
+  font-family: "Robotto", sans-serif;
+  color: #6e90a0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#posts {
+  background-color: #d4e9f2;
+}
+
+#about {
+  background-color: #c6edff;
+}
+
+.button {
+  font-family: "Robotto", sans-serif;
+  font-size: 1.5rem;
+  color: #94d8ff;
+  background-color: #effaff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-weight: 300;
+  transition-duration: 0.5s;
+}
+.button:hover {
+  color: #effaff;
+  background-color: #94d8ff;
+}
+
+#footer {
+  min-height: 25vh;
+  background-color: #11313f;
+}
+
+#heading {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#heading h1 {
+  font-family: "Robotto", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #94d8ff;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.post {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+}
+.post * {
+  max-width: 100%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1rem;
+  background-color: #11313f;
+}
+.description * {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-family: "Robotto", sans-serif;
+}
+.description .title {
+  color: #effaff;
+}
+.description .date {
+  color: #6e90a0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1rem;
+  background-color: #d4e9f2;
+}
+.content * {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-family: "Robotto", sans-serif;
+}
+.content .image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.content .paragraph {
+  color: #3f89a9;
+}
+
+#container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/beakers.min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-x: hidden;
+}/*# sourceMappingURL=style.css.map */

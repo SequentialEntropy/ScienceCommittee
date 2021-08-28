@@ -1,0 +1,30 @@
+@use "../themes/" as *;
+@use "../components/navbar";
+#title {
+    min-height: calc(100vh - #{navbar.$navbar-focused});
+    margin-top: navbar.$navbar-focused;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/beakers.min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    * {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        font-family: $font, sans-serif;
+        font-weight: $light;
+        color: $primary-color;
+        font-size: 5rem;
+    }
+    img {
+        width: auto;
+        height: auto;
+        max-height: 50vh;
+    }
+}
