@@ -1,4 +1,5 @@
 @use "../themes" as *;
+@use "../objects" as *;
 $navbar-unfocused: 5rem;
 $navbar-focused: 10rem;
 #navbar {
@@ -8,36 +9,67 @@ $navbar-focused: 10rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     min-height: 10rem;
     background-color: $primary-color;
     width: 100vw;
     transition-duration: 1s;
+    padding: 0 1rem;
 }
 
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    * {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    a {
-        font-family: $font, sans-serif;
-        font-weight: $bold;
-        color: $text-color;
-        font-size: 2rem;
-    }
-    img {
-        width: 3rem;
-        height: 3rem;
+.menu-btn {
+    visibility: hidden;
+    display: none;
+    @include mobile {
+        position: relative;
+        display: flex;
+        visibility: visible;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        // border: 3px solid $dark-card-color;
+        #{&}__burger {
+            position: absolute;
+            width: 3rem;
+            height: 0.5rem;
+            background: $secondary-color;
+            border-radius: 0.25rem;
+            // box-shadow: 0 2px 5px $secondary-color;
+            transition: all .5s ease-in-out;
+            &.top {
+                transform: translateY(-1rem);
+            }
+            &.bottom {
+                transform: translateY(1rem);
+            }
+        }
+        &.open #{&}__burger {
+            &.top {
+                transform: rotate(45deg);
+                background: $text-color;
+            }
+            &.middle {
+                transform: translateX(3rem);
+                background: transparent;
+                // box-shadow: none;
+            }
+            &.bottom {
+                transform: rotate(-45deg);
+                background: $text-color;
+            }
+        }
     }
 }
 
-#links {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.navlogo {
+    font-family: $font, sans-serif;
+    font-weight: $bold;
+    color: $text-color;
+    font-size: 2rem;
+    flex-grow: 1;
 }
 
 .navbutton {
@@ -47,8 +79,7 @@ $navbar-focused: 10rem;
     color: $secondary-color;
     border-radius: 0.5rem;
     padding: 1rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin: 0.5rem 1rem;
     font-weight: $light;
     &.active {
         background-color: $secondary-color;
@@ -59,4 +90,18 @@ $navbar-focused: 10rem;
         // font-weight: $light;
     }
     transition-duration: 0.5s;
+    width: auto;
+    visibility: visible;
+    display: inline;
+    text-align: center;
+    @include mobile {
+        width: auto;
+        visibility: hidden;
+        display: none;
+        &.open {
+            width: 100vw;
+            visibility: visible;
+            display: block;
+        }
+    }
 }

@@ -1,4 +1,5 @@
 @use "../themes/index" as *;
+@use "../objects/index" as *;
 .card {
     display: flex;
     flex-direction: column;
@@ -37,6 +38,11 @@
         color: $text-color;
         font-size: 1.5rem;
         font-weight: $light;
+    }
+    @include mobile {
+        flex-direction: column;
+        margin-left: 0vw;
+        margin-right: 0vw;
     }
 }
 

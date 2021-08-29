@@ -1,6 +1,25 @@
-navbar = document.getElementById("navbar");
+const navbar = document.getElementById("navbar");
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.getElementsByClassName("navbutton");
+let menuOpen = false;
 
-const rem = parseFloat(getComputedStyle(document.documentElement).fontSize)
+menuBtn.addEventListener("click", () => {
+    if (!menuOpen) {
+        menuBtn.classList.add("open");
+        menuOpen = true;
+        for (i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.add("open");
+        }
+    } else {
+        menuBtn.classList.remove("open");
+        menuOpen = false;
+        for (i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove("open");
+        }
+    }
+})
+
+const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
 // Debouncer
 
