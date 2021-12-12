@@ -100,10 +100,9 @@
   }
 }
 
-#title {
+.title {
   min-height: calc(100vh - 10rem);
   margin-top: 10rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/beakers.min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -113,21 +112,49 @@
   align-items: center;
   justify-content: center;
 }
-#title * {
+.title * {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-#title h1 {
+.title h1 {
   font-family: "Robotto", sans-serif;
   font-weight: 300;
   color: #effaff;
   font-size: 5rem;
   text-align: center;
 }
-#title img {
+.title img {
   width: auto;
   height: auto;
   max-height: 50vh;
+}
+
+#hometitle {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/lightbulb.min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#resourcestitle {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/library.min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#chemistrytitle {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/chemistry.min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#subjects {
+  padding: 1rem;
 }
 
 .card {
@@ -259,7 +286,7 @@
   margin-bottom: 0.25rem;
   font-family: "Robotto", sans-serif;
 }
-.description .title {
+.description .posttitle {
   color: #effaff;
 }
 .description .date {
@@ -294,6 +321,31 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.unit * {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.unit h2 {
+  font-family: "Robotto", sans-serif;
+  font-weight: 300;
+  color: #6e90a0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.pdf {
+  min-height: 100vh;
+  width: 75vw;
+  border-radius: 1rem;
 }
 
 * {

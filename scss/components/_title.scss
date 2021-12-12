@@ -1,9 +1,8 @@
 @use "../themes/" as *;
 @use "../components/navbar";
-#title {
+.title {
     min-height: calc(100vh - #{navbar.$navbar-focused});
     margin-top: navbar.$navbar-focused;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/beakers.min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,4 +27,32 @@
         height: auto;
         max-height: 50vh;
     }
+}
+
+#hometitle {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/lightbulb.min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#resourcestitle {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/library.min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#chemistrytitle {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/chemistry.min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#subjects {
+    padding: 1rem;
 }

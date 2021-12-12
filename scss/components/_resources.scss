@@ -1,0 +1,27 @@
+@use "../themes/index" as *;
+@use "../objects/index" as *;
+.unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // min-height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    * {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    h2 {
+        font-family: $font, sans-serif;
+        font-weight: $light;
+        color: $text-color;
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+.pdf {
+    min-height: 100vh;
+    width: 75vw;
+    border-radius: 1rem;
+}
